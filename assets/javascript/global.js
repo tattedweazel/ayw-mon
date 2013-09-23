@@ -18,25 +18,3 @@ $(document).ready(function(){
 	});
 
 });
-
-
-/*! This is here as an example of Mapi Call via JavaScript */
-function logEvent(server, type, description, details){
-	var api_key = 'aI31bITjdl90x';
-	$.post(
-		"http://"+root_url+"api",
-		{api_key: api_key, server: server, type: type, description: description, details: details},
-		function(data){
-			if (data.success == 1){
-				console.log(" -- Event Logged -- ");
-			}
-			else {
-				console.log(data.message);
-			}
-		},
-		"json"
-	).fail(function(){
-		console.log("## Event Log Failure ##");
-	});
-
-}
