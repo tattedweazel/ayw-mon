@@ -10,7 +10,7 @@ $(document).ready(function(){
 			'',
 			function(data){
 				if(data.success > 0){
-					window.location.href="http://www.allyourweb.net/monitaur/login";
+					window.location.href="http://"+root_url+"login";
 				}
 			},
 			"json"
@@ -24,7 +24,7 @@ $(document).ready(function(){
 function logEvent(server, type, description, details){
 	var api_key = 'aI31bITjdl90x';
 	$.post(
-		"/app/api",
+		"http://"+root_url+"api",
 		{api_key: api_key, server: server, type: type, description: description, details: details},
 		function(data){
 			if (data.success == 1){

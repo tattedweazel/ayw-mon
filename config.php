@@ -1,9 +1,9 @@
 <?php
 
 // Globals
-
+define('SERVER', $_SERVER[SERVER_NAME]);
 // Server Specific
-switch($_SERVER[SERVER_NAME]){
+switch(SERVER){
 	
 	case 'www.allyourweb.net':
 		define('DEV', false);

@@ -19,6 +19,7 @@ class Red {
 	private $listFunctions = true; // Should I list out each available function in each object?
 	
 	public function __construct(){
+		$this->server = SERVER;
 		$this->rootNode = ROOT_NODE; // Change this to the top-most folder. For root, just make it '/'
 		$this->nodes = $this->getNodes();
 		$this->functions = $this->showFunctions($this);

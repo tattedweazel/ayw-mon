@@ -17,7 +17,7 @@ foreach ($page->styles as $style) { ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo ROOT; ?>assets/css/<?php echo $style; ?>">
 <?php
 } ?>
-
+<script type="text/javascript"> var root_url = '<?php echo $red->server.$red->rootNode;?>';</script>
 <script type="text/javascript" src="<?php echo ROOT;?>assets/javascript/jquery-10.2.min.js"></script>
 <script type="text/javascript" src="<?php echo ROOT;?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo ROOT;?>assets/javascript/global.<?php echo $ext;?>js"></script>
