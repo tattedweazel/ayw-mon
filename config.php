@@ -17,9 +17,9 @@ switch($_SERVER[SERVER_NAME]){
 	// my dev
 	case 'localhost':
 		define('DEV', true);
-		define('MYSQL_HOST',"ayw-web.allyourweb.net");
-		define('MYSQL_USER',"monitaur_user");
-		define('MYSQL_PASS', "monitaur_web");
+		define('MYSQL_HOST',"127.0.0.1");
+		define('MYSQL_USER',"root");
+		define('MYSQL_PASS', "01dec2006");
 		define('MYSQL_DB',"monitaur");
 
 		break;
