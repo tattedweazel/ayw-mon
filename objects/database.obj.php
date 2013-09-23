@@ -77,7 +77,10 @@ class Database {
 					$value = date('D M jS  Y - H:i:s', $value);
 				}
 				if ($key == 'details'){
-					$value = unserialize(str_replace('\\', '', $value));
+					$test = unserialize(str_replace('\\', '', $value));
+					if (!empty($test)){
+						$value = $test;
+					}
 				}
 				$ret->{$resultRow->id}->addProp($key, $value);
 			}
