@@ -2,9 +2,9 @@
 
 echo "<br/><br/>";
 //$target = $argv[1];
-$target = 'assets/css';
+$target = '../assets/css';
 minifi($target);
-$target = 'assets/javascript';
+$target = '../assets/javascript';
 minifi($target);
 
 function minifi($target){
