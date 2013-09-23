@@ -2,16 +2,19 @@
 
 echo "\n\n";
 //$target = $argv[1];
-$target = 'assets/css';
-minifi($target);
-$target = 'assets/javascript';
-minifi($target);
+
+$targets = array(
+	'assets/css',
+	'assets/javascript',
+);
+
+foreach ($targets as $target) {
+	minifi($target);
+}
+
 
 function minifi($target){
-	if ($target == '?'){
-		echo "\n\nJust give me the path of the directory (relative to this file...) you want me to check\nand I'll skip through and minify all your css and javascript.\n\nI will always minify any non .min.* files (as long as they're css or js files. I don't do that other\nwerid stuff), but don't worry, the originals remain unscathed.\n\nThis means if you run me and I minify home.css, then you run me again on the same directory\nI will minify home.css again.\n\nI will also always just save over any .min.* files that I make that may already exist.\nBut you'd only be worried if you were editing minified files anyways.\nAnd besides... who does that?!\n\n";
-		exit;
-	}
+	
 	echo "Looking in ".$target;
 
 
