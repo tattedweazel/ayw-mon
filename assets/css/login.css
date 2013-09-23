@@ -1,0 +1,11 @@
+#loginForm {
+	background: #FFF;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+	#loginForm #logo {
+		display: inline-block;
+		width: 75px;
+		margin-right: 20px;
+	}

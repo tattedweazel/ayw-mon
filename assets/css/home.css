@@ -1,0 +1,26 @@
+.recentRow {
+	background: #999;
+	border: 1px solid #000;
+	margin-bottom: 20px;
+}
+
+	.recentRow .recentLabel {
+		background: #333;
+		color: #DDD;
+		padding: 10px 0px 5px 5px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+#alertsBlock, #notificationsBlock {
+	display: none;
+}
+
+.recentLabel {
+	cursor: pointer;
+}
+
+.recentLabel .caret {
+	border-top-color: #999;
+	border-bottom-color: #999;
+}

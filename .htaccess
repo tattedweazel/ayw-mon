@@ -1,0 +1,7 @@
+RewriteEngine on
+
+RewriteRule ^assets/ - [L,NC]
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !-d
+
+RewriteRule .* index.php [L]

@@ -1,0 +1,111 @@
+>> What is Red?
+
+> Well, good question. Red is the name of the "framework" I've developed to better aid me in creating web applications quickly and
+in a matter I'm used to thinking. In a nutshell it's a psuedo-MVC framework that centers around the use of a 'core' object (called Red).
+In this way I've been able to embody what I consider in my experience to be best-practices while maintaining an environment that reflects
+how I think and do business. 
+
+>> Why Red? Aren't there already frameworks available?
+
+> Sure, there are. There are a metric fuck-ton of options available. But, a Jedi makes his own lightsabre, right? Also, if I want to truly 
+understand the mechanics of something, what better way then to create it? And besides, coding is an art first and a science second. There
+are multiple "right ways" to approach any problem, there's just a varying degree of what "right" means. What I'm aiming to do here is have 
+a solid foundation to approach problems I encounter so I can attack them in a repeatable and consistent way. This is a growing project and
+I'm not even close to done. Hell, if I keep plinking at this guy, it may be WAAAY different in a year or two then when I wrote it. But that's
+ok. I'm not intending this to be a commercial product someday and it's likely I'm the only one that will ever use it. I'm fine with that.
+
+>> Why "Red"?
+
+> It's commented in the Red class file in short form, but I'll put the whole story here just so it's documented. 
+I had a weird-ass dream that I was going to buy a copy of Windows at Wal-Mart (cuz apparently,
+sleeping Dave buys his operating systens there...). I had 80 bucks budgeted to spend. I got there and saw this OTHER OS called 'Red'.
+Did a quick wiki search for in on my phone (cuz even in my dreams I use fucking wikipedia...) and I found that it was a North Korean
+produced OS. It was also not supposed to be on the US market at all, and was already being pulled from shelves. I noticed it was also 80
+bucks. I know my wife would lose her shit if I bought them both, but I REALLY wanted to see what the hell this thing was all about. Not that
+I am obsessed with the DPRK, cuz seriously, fuck them, but the thought of owning a piece of software legally that was acciedentally
+released on the market sounded cool for some reason. I think I wasn't "sober" when I went to bed. Anywho, to be honest, I don't even remember 
+if I made the decision or not in my dream. Truthfully, fuck yes I would have bought it in real life. I'd have set up a new stand-alone system
+just to install it. And besides, the writing on the box was in English, so I'm fairly certain the OS would have been in English. But not
+"English", probably "All your base are belong to us English". Which I love. Cuz it's awesome. So the following day (in real life) I was like
+"Dude, I think I had a dream that meant I need to make an OS". Well, I'm kinda dumb. Not really a Torvald-type thinker, so making an OS is
+pretty much OUT of the fucking question. Needless to say, about a year later I started working on a "framework" of my own, and because that
+dream has still stuck with me to this day, I decided on naming it in honor of the substance-induced-North-Korean-OS my brain made up. And
+besides, because the Red object is the core and you make calls from it constantly, having a short name worked. $red->doShit() just works.
+
+>> Why do you keep putting quotes around "framework"?
+
+> I'm not going to lie. I'm still new to the game. I've only been coding for about three years now, and only 2 of those were "professional
+gigs". I'm not one of those self-indulgent fucks that learn how to do something a little bit then pretend they're fucking pros. I use
+the term "framework" because in my experience, what I've created is an actual framework, but I'd never be so bold as to throw it out there
+as such. I'm a little more humble about the thing. Really it's a coding-tool to me. Something that helps me do shit I need to do. It's nothing
+fancy. It's not a CMS nor do I think I'll ever make it that. I enjoy hand-jamming the shit out of applications, so it'll always be non-gui. I
+just think it's the general nuts-and-bolts of a framework, but I don't want to sound like I'm pretending that I have any clue what the fuck
+I'm doing, so I call it a "framework". 
+
+>> What do you mean by "psuedo-MVC"? Isn't MVC pretty binaray?
+
+> Well, yes. Something either is, or isn't MVC to be honest. I use the psuedo- prefix because I'm emulated the architecture, but I've changed
+the terminology a bit to better fit with my thinking. Put it this way, "psuedo-MVC" is easier for someone else to understand than calling it
+MPC(twO). Although that could be a clever name, it needs additional explaining and people get the gist much faster with "psuedo-MCV". Since
+I'm documentint this now, however, so I'll explain. MPC(twO) means "Model Page Content - supplemented with templates, widgets 
+and base Objects".
+
+Basically, it's like this:
+
+Models - Models like the traditional sense. Passes shit to and from the Database to a Page. Abstracts the data-sourcing
+
+Pages - These are "Controllers" in the traditional sense. I called them "Pages" because that's what they end up being. Usually, each "Page"
+		would have a "Controller", so I just did the math up front and called them Pages. Because they still follow the same principal though
+		this keeps me in the MVC paradigm.
+
+Content - These are "Views" in the traditional sense. They're not supposed to be doing any serious logic or parsing, they just display shit.
+		  I called them "Content" because usually a View is saved as a "content" file or in a "content" directory. Realistically, a "View" is
+		  just the "Content" rendered to the page, so again I just did the math up front and called it as such.
+
+Templates - Most MVC's have other components that are not M, V, or C. I have those too. The first are templates. These guys are just pre-
+			structured things that can be re-used. Different "Content" pages may use the same "Template". I did this because there's a fair
+			chance that each page could, in fact, have a totally different head or body layout. If that's the case, then it would live in the Content page
+			rather than a template. More often though, there will be some reuse, so a Content page can either do it's own thing, or call a
+			Template. Up to you really. "You" being "me". I just say this as a way to add some flexibility in. Most Content Pages will
+			actually call the same Template, so it sounds like I just added an extra unnecessary step. Maybe, but it's how I think.
+
+Widgets - Widgets are little pieces of code that should be able to operate independently from what's going on around them. As such, they are
+		  generally pre-formatted entities that can be dropped in anywhere. This gives me the option to do things like a "login-box" widget
+		  that can just be called anywhere and will always work the same. I could also make a Facebook-comment widget and just drop it 
+		  anywhere that needed that snippet. Nothing fancy, but it's a seperate entity all the same.
+
+base Objects - These are underlying major components that everything uses. Some examples are the Red Object. It's etherial and doesn't fall
+			   under the M, V, or C. Database is the same. I also started making a Messages object and a genearl Data object. These are 
+			   usually some sort of helper device I've created to make life easier. Better living through modularity, so if I find something
+			   I'm doing a lot, but it's not an M, V, or C, I'll probably make it a base Object so everything can use it.
+
+Scripts - There are also scripts included in this, but aren't necessarily a base component. Basically, these are just php files
+		  to be ran via AJAX calls. They essentially side-step the normal page loading process since they're operating without
+		  the full environment available. This is because they don't need the entire environment, and just need specific pieces.
+		  The login/logout functinos are a good example of this.
+
+>> So how do you USE Red?
+
+> Me? With a computer, usually. I type in letters, numbers, and some other shit and things appear on my screen as a result. But srsly, I'm
+putting together some documentation now as to how to actually use the thing. I'd like to eventually assemble some form of API doc for it, but
+that's going to be a long-term project. Besides, I'm really just getting this thing rolling, so too much documentation would be dumb. I'd just
+have to re-write shit as it changes, and I'm pretty lazy sometimes so that would probably mean I wouldn't go back and change all of it right
+away, thus my docs would be out-of-sync. That would be bad. Instead, what I'm doing for now is two-fold. First, the best documentation
+is well written code. For the most part, I'm not doing anything crazy here. The variables, objects and properties are pretty descriptive. The
+logic is pretty easy to follow. When something IS odd, I'll leave inlines to let you know what's up. The second part is function comments. 
+before each comment I'm trying to be a good boy and leave the /** descriptions. This will almost always indicate clearly how and why the
+function is used. It's a basic start, but it's functional. Even I don't remember how/why I did shit 20 minutes ago, but I've been able to
+jump back to these descriptions and that's worked out pretty handy-like. I WILL eventually pull those together in a coherent document, but
+I've got some plans on the horizon that may shake up some of the functionality a bit, so I'm holding off on that until I have a more stable
+environment. Subject to change at author's discretion without prior notice or approval.
+
+>> What's next? What are these "changes" you mentioned that are coming up?
+
+> Hell I don't know. I'm really making this up as I go, but I do have some ideas. I'd like to find a way to seem in on-a-dem's fancy 
+Responsive Frameworks for handling my CSS and Javascriptiness. I'm thinking Gumby2 right now, but again, it's too early to know for sure.
+Basically, I'm looking at incorporating some tools in here to make the thing even mo-betta to use. Anything I can incorporate elegantly and 
+intelligently that makes this thing better or easier to use is on the table. We'll see. I'm not going to go too far with this as roping in a
+bunch of externally made things kind of defeats the purpose of making my own framework in the first place... But, if someone smarter than me
+makes something I can use, I may just use it. I didn't build the micro-processor my computer is using, but I sure the hell am using THAT
+right? I'm dumb, not an idiot. There's a difference.
+

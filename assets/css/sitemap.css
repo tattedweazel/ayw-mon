@@ -1,0 +1,27 @@
+.recentRow {
+	background: #999;
+	border: 1px solid #000;
+	margin-bottom: 20px;
+}
+
+	.recentRow .recentLabel {
+		background: #333;
+		color: #DDD;
+		padding: 10px 0px 5px 5px;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+.recentLabel {
+	cursor: pointer;
+}
+
+	.recentLabel h1{
+		margin: 10px 0px;
+	}
+
+.back-button {
+	display: inline-block;
+	margin-left: 40px;
+	margin-bottom: 20px;
+}

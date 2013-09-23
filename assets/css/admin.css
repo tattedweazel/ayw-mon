@@ -1,0 +1,65 @@
+.allUsers {
+	display: block;
+	background: #999;
+	margin-top: 20px;
+	border: 1px solid #000;
+}
+
+	.allUsers .rowLabel {
+		display: block;
+		background: #333;
+		color: #EEE;
+		font-size: 18px;
+		padding: 10px;
+	}
+
+	.allUsers .rowContainer {
+		display: block;
+	}
+
+		.allUsers .rowContainer .userBlock {
+			padding: 20px;
+		}
+			.allUsers .rowContainer .userBlock form {
+				padding: 10px;
+				border: 1px solid #000;
+				background: #666;
+				color: #EEE;
+				border-radius: 0px 20px 0px 20px;
+				overflow: hidden;
+				box-shadow: 5px 5px 5px #666;
+			}
+
+				.allUsers .rowContainer .userBlock form label {
+					background: #333;
+					width: 100%;
+					margin: 0px;
+					padding: 5px;
+				}
+
+				.allUsers .rowContainer .userBlock form input,
+				.allUsers .rowContainer .userBlock form select {
+					border-radius: 0px;
+					background: #CCC;
+				}		
+
+				.allUsers .rowContainer .userBlock form .password {
+					display: none;
+				}
+
+			.allUsers .rowContainer .userBlock #createForm {
+				width: 75%;
+				padding: 10px;
+			}
+
+				.allUsers .rowContainer .userBlock #createForm label {
+					margin-top: 20px;
+				}
+
+#newUserForm {
+	display: none;
+}
+
+#showForm {
+	cursor: pointer;
+}

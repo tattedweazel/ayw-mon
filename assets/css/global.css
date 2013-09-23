@@ -1,0 +1,119 @@
+body {
+	background: #666;
+}
+
+#mainNav {
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+	#mainNav #logout {
+		cursor: pointer;
+	}
+
+#debugLabel {
+	display: block;
+	cursor: pointer;
+	font-size: 16px;
+	font-style: italic;
+	width: 100px;
+	margin-top: 20px;
+}
+#debugCode{
+	display: none;
+}
+
+#mainNav #navImage {
+	display: inline-block;
+	width: 22px;
+	margin-right: 10px;
+}
+
+#mainNav .dropdown{
+	padding-left: 10px;
+	border: 1px solid #333;
+}
+
+	#mainNav .dropdown:hover,
+	#mainNav .dropdown.open,
+	#mainNav .dropdown:hover .dropdown-toggle,
+	#mainNav .dropdown.open .dropdown-toggle{
+		background: #2C2C2C;
+	}
+
+.breadcrumb {
+	margin-bottom: 20px;
+	background: #555;
+	color: #EEE;
+	border-radius: 0px;
+}
+
+.breadcrumb a {
+	color:#FFF;
+}
+	.breadcrumb a:hover {
+		text-decoration: none;
+	}
+
+
+.status-pending {
+	background: #890909;
+	color: #FFF;
+}
+
+.status-acknowledged {
+	background: #baa80b;
+	color: #FFF;
+}
+
+.status-resolved {
+	background: green;
+	color: #DDD;
+}
+
+.eventBlock {
+	padding: 20px 10px;
+}
+
+	.eventBlock .eventContent .eventStatus{
+		padding: 5px;
+		border-bottom: 1px solid #000;
+		position: relative;
+	}
+
+		.eventBlock .eventContent .eventStatus .view-icon img{
+			position: absolute;
+			top: 0px;
+			right: 5px;
+			width: 30px;
+		}
+
+	.eventBlock .eventContent{
+		border: 1px solid #000;
+		border-radius: 0px 20px 0px 20px;
+		box-shadow: 5px 5px 5px #666;
+		overflow: hidden;
+		background: #333;
+	}
+
+		.eventBlock .eventContent .eventRow {
+			padding: 0px;
+			border-bottom: 1px solid #000;
+		}
+
+		.eventBlock .eventContent .eventRow .label {
+			display: inline-block;
+			width: 33%;
+			line-height: 14px;
+			color: #DDD;
+			background: #555;
+			font-weight: normal;
+		}
+
+		.eventBlock .eventContent .eventRow .value {
+			display: inline-block;
+			font-size: 12px;
+			overflow: hidden;
+			color: #DDD;
+
+		}
