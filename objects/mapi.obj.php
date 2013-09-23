@@ -13,6 +13,9 @@ class Mapi {
 	}
 
 	private function buildRequest($server, $type, $description, $details){
+		if (json_decode($details)){
+			$details = json_decode($details);
+		}
 		if (is_array($details) || is_object($details)){
 			$details = serialize($details);
 		}
