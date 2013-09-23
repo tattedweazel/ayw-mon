@@ -5,10 +5,10 @@ class Database {
 	public $queries;
 	public $lastQuery;
 
-	const DB_HOST = "ayw-web.allyourweb.net";
-	const DB_USER = "monitaur_user";
-	const DB_PASS = "monitaur_web";
-	const DB_BASE = "monitaur";
+	const DB_HOST = MYSQL_HOST;
+	const DB_USER = MYSQL_USER;
+	const DB_PASS = MYSQL_PASS;
+	const DB_BASE = MYSQL_DB;
 	public $functions;
 
 	public function __construct(){

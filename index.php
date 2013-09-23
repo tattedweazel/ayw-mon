@@ -1,8 +1,6 @@
 <?php
 
-// initial settings
-define('DEV', false);
-
+include('config.php');
 //figure out what my root I'm working with is
 $root = str_replace('index.php','',str_replace('\\','/',__FILE__));
 
