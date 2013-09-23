@@ -10,7 +10,7 @@ class sitemap_page extends BasePage{
 		$this->addContent('sitemap');
 		$this->pageTitle = "Site Map";
 		$bt =  debug_backtrace();
-		$red->logEvent("www.allyourweb.net", "alert", "404 - ".$red->request, array("request" => $red->request, "file" => $bt[0]['file'], "line" => $bt[0]['line'],"environment" => print_r($red, true)));
+		$red->logEvent($_SERVER[SERVER_NAME], "alert", "404 - ".$red->request, array("request" => $red->request, "file" => $bt[0]['file'], "line" => $bt[0]['line'],"environment" => print_r($red, true)));
 	}
 }
 
