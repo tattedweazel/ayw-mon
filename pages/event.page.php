@@ -9,6 +9,7 @@ class Event_page extends BasePage{
 	private $contentPage;
 	private $type;
 	private $scope;
+	private $allowEmptyResults;
 
 	public function __construct(){
 		parent::__construct();
@@ -73,6 +74,7 @@ class Event_page extends BasePage{
 	private function fetchData(){
 		switch($this->scope){
 			case 'all':
+				$this->allowEmptyResults = true;
 				$events = $this->models->event->getAllType($this->type, 'updated DESC');
 				$locations = array();
 				$statusCounts = array('pending' => 0, 'acknowledged' => 0, 'resolved' => 0);
@@ -98,6 +100,7 @@ class Event_page extends BasePage{
 				break;
 
 			case 'status':
+				$this->allowEmptyResults = true;
 				$events = $this->models->event->getAllTypeByStatus($this->type, $this->status, 'updated Desc');
 				$locations = array();
 				foreach ($events as $event){
@@ -129,7 +132,7 @@ class Event_page extends BasePage{
 	}
 
 	private function setContentPage(){
-		if(reset($this->data->events)){	
+		if(reset($this->data->events) || $this->allowEmptyResults){	
 			$this->contentPage = $this->scope.'_events';
 		}
 		else {

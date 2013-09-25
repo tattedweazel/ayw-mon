@@ -25,7 +25,10 @@ $page->breadCrumbs(array("Home" => "home", $page->pageTitle => strtolower($page-
 				?>
 			</div>
 			<?php
-			
+			if (!reset($page->data->events)){?>
+				<span id="noEvents">There are no <?php echo $page->pageTitle;?> to show</span>
+			<?php
+			}
 			foreach($page->data->events as $item){
 				$page->temp = $item;
 				$red->widget('event_block');
