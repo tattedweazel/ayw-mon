@@ -15,6 +15,7 @@ class Red {
 	public $fileroot;
 	public $rootNode;
 	public $data;
+	public $server;
 	public $noRedner = false;
 	private $listFunctions = true; // Should I list out each available function in each object?
 	
