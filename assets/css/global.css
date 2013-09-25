@@ -23,6 +23,15 @@ body {
 	display: none;
 }
 
+#noEvents {
+	display: block;
+	margin: 75px auto 50px;
+	padding: 20px;
+	background: #CCC;
+	font-size: 20px;
+	text-align: center;
+}
+
 #mainNav #navImage {
 	display: inline-block;
 	width: 22px;

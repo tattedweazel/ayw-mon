@@ -8,7 +8,7 @@
 		<div class="recentBlock">
 			<div>
 				<p>
-					<h2>The requested page was not found.</h2>
+					<span id="noEvents">The requested page was not found.</span>
 				</p>
 
 				<?php $page->linkTo(array("href" => "home", "class" => "btn btn-primary back-button"), "&laquo; Back");?>

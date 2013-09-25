@@ -45,15 +45,6 @@
 		box-shadow: 3px 3px 3px #CCC inset;
 	}
 
-#noEvents {
-	display: block;
-	margin: 75px auto 50px;
-	padding: 20px;
-	background: #CCC;
-	font-size: 20px;
-	text-align: center;
-}
-
 .status-active {
 	border: 1px solid #FFF;
 }
