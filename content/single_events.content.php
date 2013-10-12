@@ -48,7 +48,7 @@ $page->breadCrumbs(array("Home" => "home", $page->pageTitle => strtolower($page-
 						</span>
 					</div>
 					<div class="eventRow tall">
-						<textarea disabled="disabled">> Supporting Details:<?php echo "\n\n";print_r($event->details);?>{{{'(~_^ )'}}} </textarea>
+						<textarea disabled="disabled" id="detailsText">> Supporting Details:<?php echo "\n\n";print_r($event->details);?>{{{'(~_^ )'}}} </textarea>
 					</div>
 				</div>
 
