@@ -4,8 +4,8 @@ echo "\n\n";
 //$target = $argv[1];
 
 $targets = array(
-	'assets/css',
-	'assets/javascript',
+	'../../assets/css',
+	'../../assets/javascript',
 );
 
 foreach ($targets as $target) {
