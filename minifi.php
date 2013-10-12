@@ -14,13 +14,13 @@ foreach ($targets as $target) {
 
 function minifi($target){
 	
-	echo "Looking in test".$target;
+	echo "Looking in ".$target;
 
 
 	$dir = opendir($target);
 
 	if (!$dir) {
-		echo "You have provided an invalid didsectory name\n\n";
+		echo "You have provided an invalid directory name\n\n";
 		exit;
 	}
 
