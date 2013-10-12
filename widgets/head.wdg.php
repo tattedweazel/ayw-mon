@@ -20,7 +20,7 @@ foreach ($page->styles as $style) { ?>
 } ?>
 <script type="text/javascript"> var root_url = '<?php echo $red->server.$red->rootNode;?>';</script>
 <script type="text/javascript" src="<?php echo ROOT;?>assets/javascript/jquery-10.2.min.js"></script>
-<script type="text/javascript" src="<?php echo ROOT;?>assets/plugins/jqueryui/js/jquery-ui-1.10.3.custom.min"></script>
+<script type="text/javascript" src="<?php echo ROOT;?>assets/plugins/jqueryui/js/jquery-ui-1.10.3.custom.min.js"></script>
 <script type="text/javascript" src="<?php echo ROOT;?>assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php echo ROOT;?>assets/javascript/global.<?php echo $ext;?>js"></script>
 <?php
