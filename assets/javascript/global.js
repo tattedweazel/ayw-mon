@@ -16,5 +16,6 @@ $(document).ready(function(){
 			"json"
 		);
 	});
+	console.log("minification is working");
 
 });
