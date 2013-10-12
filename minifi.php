@@ -109,6 +109,5 @@ function minifi($target){
 	else {
 		//echo "\n\nAwww... there's nothing to minify. Why'd you bother me?";
 	}
-	//echo "\n\n";
 }
 ?>
