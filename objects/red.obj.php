@@ -212,7 +212,6 @@ class Red {
 	* Checks to see if a given index is in GET data
 	*/
 	public function inGet($index){
-		echo $index;
 		if (isset($this->data->get->{$index})){
 			return true;
 		}
